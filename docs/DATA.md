@@ -14,7 +14,7 @@ external_storage/
   checkpoints/alternatives/
 ```
 
-The existing original folder contains roughly 336 GB across raw/derived data, memory maps and weights. Leave it in place during cleanup. Pass existing paths explicitly; do not duplicate it into this repository, put external data symlinks inside it, or initialize Git at the original folder's root.
+The original audit inventoried roughly336GB across raw/derived data, memory maps and weights. The owner's later local organization separates canonical raw data/checkpoints, private historical evidence and retired derivatives awaiting permanent-removal approval. Paths are explicit and migrations recorded; original raw bytes and retained model states are unchanged. Do not duplicate data into this repository, put external data symlinks inside it, or initialize Git at the surrounding storage root.
 
 ## Report-described final preparation
 
@@ -32,3 +32,7 @@ For exact historical reconstruction, recover or implement a separately versioned
 ## Later raw-scene workflow — October 2026
 
 The [local workflow](LOCAL_WORKFLOW.md) supplies a separately labeled, executable raw-scene path. It indexes image/annotation pairs without reading image payloads, then validates/rasterizes one scene at a time during prediction, evaluation or fresh training. It retains every tile, performs no augmentation or resizing, validates integer RGB values before uint8 conversion (the recovered TIFFs use int16), and exposes unknown-label error/ignore/legacy-undamaged policies. This does not regenerate the historical augmented training arrays or settle the report's ambiguous empty-tile filtering prose.
+
+## Personal storage organization
+
+A local container can hold `public-release/` (the only Git tree), `local-workflow/` (private path profile/new runs), `private-storage/xbd/` (raw source subsets), `private-storage/checkpoints/tensorflow/` (retained candidate prefixes) and `history/` (original source/evidence and alternative model states). The private launcher now uses the canonical raw/checkpoint locations. Earlier run/manifests are kept unchanged as historical records; generate a fresh manifest after moving data. Retiring old224crop/SAM data products does not recover the missing historical augmented preparation or independently verify report results.

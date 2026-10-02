@@ -68,4 +68,13 @@
 
 9. Validated 24 automated checks and the persistent local environment; restored retained candidate06 and generated a fresh four-tile post-disaster scene figure. Verified complete hold+test (1,866 scenes/7,464 tiles) and fresh training (9,168 scenes/36,672 unaugmented tiles; hold validation) plans without launching full evaluation or training. Checked soft aggregation against legacy Keras on synthetic probabilities. No new benchmark score or reported-metric change was made.
 
+## Private storage organization — 2026-10-02
+
+1. Consolidated 172 original sources/notebooks and historical evidence files into a private TAR archive; reopened and SHA256-verified every member. Preserved the authoritative report separately without modifying synced references.
+2. Moved all44,136 raw pre/post image/annotation files and both complete TensorFlow checkpoint sets to canonical private storage on the same filesystem. Verified raw file inode/size/mtime and checkpoint hashes; updated the owner's private path profile.
+3. Preserved allnine unique alternative PyTorch/SAM checkpoint files in private history. Verified that the extracted PyTorch tensor payload duplicates a retained checkpoint byte for byte.
+4. Verified a fresh post-disaster scene prediction after migration: source hashes, selected checkpoint hashes and predicted class arrays match the earlier local run. No training, full evaluation or report-metric change occurred.
+5. Moved remaining legacy material into a reversible private holding area, including retired224crop/SAM derivatives and archived working copies. Permanent deletion of the exact set is pending explicit approval; no deleted-data or reclaimed-storage claim is made at this phase.
+6. Updated private navigation, the local guide and generic storage documentation. Historical archive contents and earlier run manifests retain their original bytes/paths; a private migration manifest maps the old layout to current locations. No weights, raw data, private archive or newly generated imagery were published.
+
 Future corrections, recovered provenance and new experiments must receive distinct dated entries. Recovered logs should augment the record; they must not silently replace the original report values.
