@@ -1,0 +1,11 @@
+# Cleanup compatibility recipe, not the recovered 2023 environment.
+tensorflow==2.16.2
+tf-keras==2.16.0
+numpy==1.26.4
+segmentation-models==1.0.1
+opencv-python-headless==4.10.0.84
+geojson==3.1.0
+shapely==2.0.6
+tifffile==2024.9.20
+tqdm==4.66.5
+matplotlib==3.9.2

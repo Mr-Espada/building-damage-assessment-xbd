@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "building-damage-capstone"
+version = "0.1.0"
+description = "Recovered undergraduate xBD segmentation project with explicit evidence provenance"
+readme = "README.md"
+authors = [{name = "Mohammad Hachim Eraissouni"}]
+license = "MIT"
+license-files = ["LICENSE", "NOTICE.md"]
+requires-python = ">=3.12,<3.13"
+dynamic = ["dependencies"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["src"]

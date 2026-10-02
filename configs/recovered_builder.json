@@ -1,0 +1,11 @@
+{
+  "provenance": "Recovered Model_Tensorflow/model.py defaults; batch/epochs supplied from report for later wrapper, not a recovered run",
+  "backbone": "resnet101",
+  "image_size": 512,
+  "classes": 5,
+  "learning_rate": 0.00001,
+  "batch_size": 32,
+  "epochs": 150,
+  "encoder_weights": "imagenet",
+  "seed": 42
+}

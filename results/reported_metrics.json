@@ -1,0 +1,28 @@
+{
+  "project_title": "Computer Vision for Building Damage Assessment Using Satellite Imagery of Natural Disasters",
+  "status": "reported_not_independently_reproduced",
+  "source": {
+    "document": "Masters project Final Report.pdf",
+    "sha256": "7f3852f5fa2f5897f1f4cc2de7c08a7064a20e06e1fc540d0753234c0466fdf3",
+    "printed_page": 24,
+    "pdf_page": 33
+  },
+  "completed_epochs_reported": 105,
+  "planned_epochs_reported": 150,
+  "train": {
+    "loss": 0.2238,
+    "iou": 0.64863,
+    "f1": 0.7217
+  },
+  "validation": {
+    "loss": 0.2983,
+    "iou": 0.62743,
+    "f1": 0.6746
+  },
+  "validation_split_description": "xBD hold + test post-disaster scenes; report says 7464 tiles",
+  "historical_checkpoint_association_verified": false,
+  "notes": [
+    "Exact original environment, final arrays and full run history not recovered.",
+    "Not an independent test result or official xView2 competition score."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "cleanup_date": "2026-10-01",
+  "no_training_performed": true,
+  "reported_metrics_unchanged": true,
+  "original_files_modified": false,
+  "preserved_candidates": [
+    {
+      "source_relative_to_original_capstone": "Model_Tensorflow/model.py",
+      "release_path": "archive/final_candidate/model.py",
+      "transformation": "byte-identical copy",
+      "source_sha256": "b910a7085c4aead44f55dbdbc92655b7f47f17ef5a953d56f815f697e0470c2e",
+      "release_sha256": "b910a7085c4aead44f55dbdbc92655b7f47f17ef5a953d56f815f697e0470c2e"
+    },
+    {
+      "source_relative_to_original_capstone": "Model_Tensorflow/data_processing.py",
+      "release_path": "archive/final_candidate/data_processing.py",
+      "transformation": "byte-identical copy",
+      "source_sha256": "baddd3e9534076520d09fd4dd0d27723b49a2dec32fc51810ad6702a9df79e8e",
+      "release_sha256": "baddd3e9534076520d09fd4dd0d27723b49a2dec32fc51810ad6702a9df79e8e"
+    },
+    {
+      "source_relative_to_original_capstone": "Model_Tensorflow/model_testing.ipynb",
+      "release_path": "archive/final_candidate/model_testing.ipynb",
+      "transformation": "all original cells/code retained; provenance header added; outputs/execution/metadata removed",
+      "source_sha256": "5cc2f1c3025365e8c84a8eeb37a54bc6d8730483158c8b120a46bd520d89b1a5",
+      "release_sha256": "dd4d127f35d4912be99debfc6529ce3116489e2bbb96801a977a9ae6737d1e75"
+    }
+  ],
+  "new_code": "src/building_damage, tests and scripts added during cleanup; not recovered original driver",
+  "revisions": [
+    {
+      "date": "2026-10-01",
+      "phase": "second-pass historical HPC/checkpoint provenance",
+      "documentation": "docs/HISTORICAL_HPC_PROVENANCE.md",
+      "verdict": "Plausible final-checkpoint candidate",
+      "author_name_corrected": "Mohammad Hachim Eraissouni",
+      "historical_source_edits": false,
+      "training_performed": false,
+      "real_data_evaluation_performed": false,
+      "reported_metrics_modified": false,
+      "first_pass_prepared_versions": "retained in separate private audit/revisions/first-pass"
+    },
+    {
+      "date": "2026-10-01",
+      "phase": "licensing and local Git preparation",
+      "license": "MIT",
+      "historical_source_edits": false,
+      "reported_metrics_modified": false,
+      "training_performed": false,
+      "real_data_evaluation_performed": false,
+      "git_scope": "prepared public-release directory only; reviewed local staging without publication",
+      "pre_license_prepared_versions": "retained in separate private audit/license-preparation/revisions/pre-license"
+    },
+    {
+      "date": "2026-10-02",
+      "phase": "initial Git commit preparation",
+      "historical_source_edits": false,
+      "reported_metrics_modified": false,
+      "training_performed": false,
+      "real_data_evaluation_performed": false,
+      "publication_performed": false,
+      "repository_management_request": "mehdinejjar86 to share repository management; not a change in academic authorship",
+      "github_destination_and_permissions": "user selected Mr-Espada/building-damage-assessment-xbd, public personal repository with mehdinejjar86 write collaborator; publication/invitation verification separate",
+      "pre_commit_prepared_versions": "retained in private audit/publication-preparation-2026-10-02/revisions/pre-initial-commit"
+    }
+  ],
+  "license": {
+    "spdx": "MIT",
+    "copyright_holder": "Mohammad Hachim Eraissouni",
+    "copyright_years": "2023-2026",
+    "authorization_date": "2026-10-01",
+    "authorization": "author personally confirmed code ownership and delegated license selection",
+    "scope": "author-owned code and accompanying repository documentation; dependencies and excluded materials retain separate terms"
+  }
+}

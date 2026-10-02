@@ -1,0 +1,84 @@
+{
+  "status": "candidate_weights_not_distributed; report_association_unverified",
+  "candidates": [
+    {
+      "candidate": "27112023184805",
+      "scalars": {
+        "optimizer/_iterations/.ATTRIBUTES/VARIABLE_VALUE": 180606,
+        "optimizer/_learning_rate/.ATTRIBUTES/VARIABLE_VALUE": 9.999999747378752e-06
+      },
+      "report_samples_per_epoch": 186404,
+      "report_batch_size": 32,
+      "steps_per_report_epoch": 5826,
+      "note": "Conditional epoch equivalent only: assumes report cardinality, global batch32, ceiling batching, one update per batch, zero initial counter and no reset/preceding updates. No explicit epoch metadata. Saved learning rate is not initial-LR evidence.",
+      "inferred_epochs_if_report_counts_apply": 31.0,
+      "files": [
+        {
+          "name": "best_model.ckpt.data-00000-of-00001",
+          "bytes": 618649742,
+          "sha256": "efa8dc31a6952e8233ed5d1e7b53cc951b89a09aba8e69d00fdddcb04b262ab9"
+        },
+        {
+          "name": "best_model.ckpt.index",
+          "bytes": 76934,
+          "sha256": "fc1e9260ca1b6d046e36145d6bdc642461780e4fe766dca43380c9d57d2da745"
+        },
+        {
+          "name": "checkpoint",
+          "bytes": 87,
+          "sha256": "9fda5590c3c1ea479d0dd5a0a19aafbb67336891d73c0a285c8fdc0a63e7bb7f"
+        }
+      ],
+      "runtime_restore": "All existing U-Net/ResNet101 model variables matched in cleanup compatibility environment; not original-data evaluation.",
+      "model_parameters": 51606046,
+      "inference_selection": "no recovered inference selection",
+      "final_hpc_provenance_verdict": "compatible alternative checkpoint; final run association unresolved"
+    },
+    {
+      "candidate": "27112023184806",
+      "scalars": {
+        "optimizer/_iterations/.ATTRIBUTES/VARIABLE_VALUE": 600078,
+        "optimizer/_learning_rate/.ATTRIBUTES/VARIABLE_VALUE": 9.999999747378752e-06
+      },
+      "report_samples_per_epoch": 186404,
+      "report_batch_size": 32,
+      "steps_per_report_epoch": 5826,
+      "note": "Conditional epoch equivalent only: assumes report cardinality, global batch32, ceiling batching, one update per batch, zero initial counter and no reset/preceding updates. No explicit epoch metadata. Saved learning rate is not initial-LR evidence.",
+      "inferred_epochs_if_report_counts_apply": 103.0,
+      "files": [
+        {
+          "name": "best_model.ckpt.data-00000-of-00001",
+          "bytes": 618649742,
+          "sha256": "81b9e8b1057baa2514ae7f60f836cf2bd75c64b71d1e728745cdb8b8e75be9a4"
+        },
+        {
+          "name": "best_model.ckpt.index",
+          "bytes": 76934,
+          "sha256": "7269a663e4f0c5de024fbee618e061de3efc9c6b8587f32ef4dc8ec4b5ad0361"
+        },
+        {
+          "name": "checkpoint",
+          "bytes": 87,
+          "sha256": "9fda5590c3c1ea479d0dd5a0a19aafbb67336891d73c0a285c8fdc0a63e7bb7f"
+        }
+      ],
+      "runtime_restore": "All existing U-Net/ResNet101 model variables matched in cleanup compatibility environment; not original-data evaluation.",
+      "model_parameters": 51606046,
+      "inference_selection": "explicit visible and hidden inference notebook selection; hidden saved predictions, without immutable loaded-byte digest",
+      "final_hpc_provenance_verdict": "Plausible final-checkpoint candidate"
+    }
+  ],
+  "second_pass_provenance_review": "2026-10-01",
+  "provenance_document": "docs/HISTORICAL_HPC_PROVENANCE.md",
+  "comparison": {
+    "same_names_shapes_and_object_graph": true,
+    "model_tensors_compared": 563,
+    "model_tensors_changed": 563,
+    "optimizer_slot_tensors_compared": 678,
+    "optimizer_slot_tensors_changed": 678,
+    "same_run_or_resume_relationship_verified": false,
+    "checkpoint_entries_per_candidate": 1244,
+    "variable_tensors_per_candidate": 1243,
+    "object_graph_entries_per_candidate": 1
+  }
+}

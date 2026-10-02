@@ -1,0 +1,11 @@
+{
+  "provenance": "Final report, printed pages 14-16 and 22; parameters not verified against the missing 105-epoch run",
+  "backbone": "resnet101",
+  "image_size": 512,
+  "classes": 5,
+  "learning_rate": 0.0001,
+  "batch_size": 32,
+  "epochs": 150,
+  "encoder_weights": "imagenet",
+  "seed": 42
+}
