@@ -14,7 +14,7 @@ external_storage/
   checkpoints/alternatives/
 ```
 
-The original audit inventoried roughly336GB across raw/derived data, memory maps and weights. The owner's later local organization separates canonical raw data/checkpoints, private historical evidence and retired derivatives awaiting permanent-removal approval. Paths are explicit and migrations recorded; original raw bytes and retained model states are unchanged. Do not duplicate data into this repository, put external data symlinks inside it, or initialize Git at the surrounding storage root.
+The original audit inventoried roughly336GB across raw/derived data, memory maps and weights. The owner's later local organization separates canonical raw data/checkpoints from private historical evidence. After explicit scope approval, obsolete 224-pixel crop/SAM derivatives were removed; they are not backed up, and exact regeneration is not claimed. Original code/evidence and unique alternative model states remain preserved privately. Paths are explicit and migrations recorded; original raw bytes and retained model states are unchanged. Do not duplicate data into this repository, put external data symlinks inside it, or initialize Git at the surrounding storage root.
 
 ## Report-described final preparation
 
