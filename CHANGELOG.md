@@ -47,4 +47,10 @@
 2. Preserved prepared versions before the first commit privately and prepared the initial `main` commit. Scientific author attribution and copyright remain unchanged; requested shared repository management concerns GitHub permissions.
 3. Separated local commit preparation from subsequent GitHub publication and access verification. Personal repositories cannot provide a second owner; shared administration requires an organization repository. The user selected publication under personal account `Mr-Espada`, with `mehdinejjar86` invited as a write collaborator; this preparation entry does not assert the invitation was accepted.
 
+## Public GitHub publication — 2026-10-02
+
+1. Published the reviewed research archive under `Mr-Espada/building-damage-assessment-xbd` with MIT licensing and verified anonymous public access. The repository contains the selected code/documentation and reported-value chart; original datasets, checkpoints, full PDFs and private audit/archive material are excluded.
+2. Issued the requested write-collaborator invitation. Activation depends on acceptance; management access does not change academic authorship or copyright attribution.
+3. Updated README status, publication checklist, cleanup provenance and local navigation/audit records; rebuilt the release ZIP and verified local/remote file identity. No scientific method, reported metric, dataset or checkpoint changed.
+
 Future corrections, recovered provenance and new experiments must receive distinct dated entries. Recovered logs should augment the record; they must not silently replace the original report values.

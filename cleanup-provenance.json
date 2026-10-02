@@ -62,6 +62,17 @@
       "repository_management_request": "mehdinejjar86 to share repository management; not a change in academic authorship",
       "github_destination_and_permissions": "user selected Mr-Espada/building-damage-assessment-xbd, public personal repository with mehdinejjar86 write collaborator; publication/invitation verification separate",
       "pre_commit_prepared_versions": "retained in private audit/publication-preparation-2026-10-02/revisions/pre-initial-commit"
+    },
+    {
+      "date": "2026-10-02",
+      "phase": "public GitHub publication and write collaborator invitation",
+      "historical_source_edits": false,
+      "reported_metrics_modified": false,
+      "training_performed": false,
+      "real_data_evaluation_performed": false,
+      "public_repository": "https://github.com/Mr-Espada/building-damage-assessment-xbd",
+      "publication_verified": true,
+      "management_permissions_do_not_change_academic_authorship": true
     }
   ],
   "license": {
@@ -71,5 +82,16 @@
     "authorization_date": "2026-10-01",
     "authorization": "author personally confirmed code ownership and delegated license selection",
     "scope": "author-owned code and accompanying repository documentation; dependencies and excluded materials retain separate terms"
+  },
+  "publication": {
+    "date": "2026-10-02",
+    "url": "https://github.com/Mr-Espada/building-damage-assessment-xbd",
+    "visibility": "public",
+    "branch": "main",
+    "initial_commit": "3e738e2d6fbb3b22b9b4d223724652a4f0819d63",
+    "academic_authorship_unchanged": true,
+    "management_invitation_issued": true,
+    "invited_role": "write",
+    "acceptance": "pending at publication verification; active access is not claimed"
   }
 }

@@ -2,7 +2,7 @@
 
 Undergraduate capstone by **Mohammad Hachim Eraissouni** (2023), using xBD satellite imagery to segment building footprints and assign damage categories. The final report describes a TensorFlow/Keras **U-Net with a ResNet101 encoder**, operating on 512 × 512 RGB tiles and producing five pixel classes: background, undamaged, minor damage, major damage and destroyed.
 
-**Status:** recovered academic research archive, prepared for eventual public release. The final architecture is recovered; the exact training data, 105-epoch run history and checkpoint-to-result association are incomplete. The repository does not claim independent reproduction of the original results. Repository preparation in October 2026 is documented separately from the undergraduate experiments.
+**Status:** published academic research archive: [GitHub repository](https://github.com/Mr-Espada/building-damage-assessment-xbd). The final architecture is recovered; the exact training data, 105-epoch run history and checkpoint-to-result association are incomplete. The repository does not claim independent reproduction of the original results. Repository preparation in October 2026 is documented separately from the undergraduate experiments.
 
 ## Reported results
 

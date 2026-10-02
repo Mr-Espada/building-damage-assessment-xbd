@@ -10,7 +10,11 @@ Required publication decisions/checks:
 - [x] Run release validation and inspect the local Git staged-file list for this candidate; exact file hashes and exclusion checks are recorded privately.
 - [x] Initialize local Git on `main` **inside this release directory** and stage only the reviewed public files.
 - [x] Create the initial local Git commit using the configured Git identity after verifying the reviewed public file set.
-- [ ] Select the GitHub destination and permissions arrangement, publish the repository and verify the invited collaborator's access. Recheck staged contents after any later changes.
+- [x] Publish the reviewed repository under [Mr-Espada/building-damage-assessment-xbd](https://github.com/Mr-Espada/building-damage-assessment-xbd) and verify anonymous public access and the remote file set.
+- [x] Issue the requested collaborator invitation with write access; repository-management permissions do not change academic authorship.
+- [ ] Collaborator accepts the GitHub invitation. This is an external action; invitation delivery is verified, while active access must be checked after acceptance.
+
+For later changes, re-run the release checker and review the actual Git file list before pushing.
 
 Optional evidence recovery and later work:
 
