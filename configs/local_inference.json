@@ -1,0 +1,11 @@
+{
+  "provenance": "October 2026 local inference/evaluation defaults; batch size 1 for modest memory use, NOT the historical evaluation recipe. Learning rate and epochs are placeholders unused by inference.",
+  "backbone": "resnet101",
+  "image_size": 512,
+  "classes": 5,
+  "learning_rate": 0.00001,
+  "batch_size": 1,
+  "epochs": 1,
+  "encoder_weights": null,
+  "seed": 42
+}

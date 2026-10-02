@@ -53,4 +53,19 @@
 2. Issued the requested write-collaborator invitation. Activation depends on acceptance; management access does not change academic authorship or copyright attribution.
 3. Updated README status, publication checklist, cleanup provenance and local navigation/audit records; rebuilt the release ZIP and verified local/remote file identity. No scientific method, reported metric, dataset or checkpoint changed.
 
+## Local scene workflow preparation — 2026-10-02
+
+1. Added `src/building_damage/scenes.py` for deterministic, metadata-only manifests of paired post-disaster TIFF/JSON scenes and streamed, range-checked loading. It records content hashes, keeps all four 512-pixel tiles, performs no resampling or augmentation, and requires an explicit unknown-subtype policy when the default rejection encounters one. This is a fresh preparation protocol, not recovery of the historical final arrays.
+2. Added `src/building_damage/scene_workflow.py` and CLI dispatch for `prepare-scenes`, `predict-scenes`, `evaluate-scenes` and `train-scenes`. Restored-checkpoint prediction/evaluation uses local weights without ImageNet initialization; prediction saves class arrays and labeled input/mask/prediction/overlay figures. Manifests, source/checkpoint hashes, configuration, runtime versions, progress and completion/failure status distinguish new runs from reported results. Existing output paths are refused.
+3. Added `src/building_damage/metrics.py` for dataset-level argmax confusion counts, per-class scores, macro scores with documented undefined-class handling, pixel accuracy and ignored-pixel counts. Evaluation keeps these separate from the recovered probability-based library metrics, records effective batching and labels every new result as distinct from historical report reproduction and the official xView2 score.
+4. Added `configs/local_inference.json` with no encoder initialization and batch size 1, plus `tests/test_scenes.py`, `tests/test_metrics.py` and `tests/test_scene_workflow.py` for geometry/data contracts, hand-calculated score behavior and run contracts. These additions do not claim validation of the original 105-epoch experiment.
+5. Added `docs/LOCAL_WORKFLOW.md` and updated public workflow/environment/data/reproducibility guidance and README references. Personal path profiles, manifests, generated results and checkpoint files remain local and excluded from Git.
+6. Prepared a future fresh-training interface: scene-level split overlap checks, matching unknown policies, no augmentation and no implicit checkpoint resume. The recommended future plan uses tier1+tier3 for training, hold for validation and reserves test. It differs explicitly from the report's preparation and split usage. No retraining is implied by workflow preparation, and report metrics/chart remain unchanged.
+
+
+7. Fixed the cleanup wrapper’s seeded-initializer compatibility with Python3.12/tf-keras2.16 using Python/NumPy/TensorFlow seed setters; added a regression check. No historical code or checkpoint tensor changed.
+8. Recorded runner source/config hashes and device inventory; marked evaluation progress completed/failed and excluded entirely ignored batches from probability-score means.
+
+9. Validated 24 automated checks and the persistent local environment; restored retained candidate06 and generated a fresh four-tile post-disaster scene figure. Verified complete hold+test (1,866 scenes/7,464 tiles) and fresh training (9,168 scenes/36,672 unaugmented tiles; hold validation) plans without launching full evaluation or training. Checked soft aggregation against legacy Keras on synthetic probabilities. No new benchmark score or reported-metric change was made.
+
 Future corrections, recovered provenance and new experiments must receive distinct dated entries. Recovered logs should augment the record; they must not silently replace the original report values.

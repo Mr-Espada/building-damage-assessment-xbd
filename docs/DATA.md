@@ -27,4 +27,8 @@ The existing original folder contains roughly 336 GB across raw/derived data, me
 
 The unchanged mask/cut helpers are retained in `archive/final_candidate/data_processing.py` for inspection. Do not run archived top-level preparation scripts against originals: some overwrite memory maps/HDF5 and use unsorted file listings. Preparation instructions document the recoverable recipe; no unvalidated end-to-end reconstruction is presented as the original pipeline.
 
-When reconstruction is explicitly authorized, implement a separately versioned driver, avoid interpolation of categorical masks, specify unknown labels and empty-tile rules, fix duplicate-index handling, split before augmentation, and validate on synthetic polygons before using data. Report any difference from the undergraduate method. Do not compare reconstructed scores as if they were the historical run.
+For exact historical reconstruction, recover or implement a separately versioned driver, avoid interpolation of categorical masks, specify unknown labels and empty-tile rules, fix duplicate-index handling, split before augmentation, and validate on synthetic polygons before using data. Report any difference from the undergraduate method. Do not compare reconstructed scores as if they were the historical run.
+
+## Later raw-scene workflow — October 2026
+
+The [local workflow](LOCAL_WORKFLOW.md) supplies a separately labeled, executable raw-scene path. It indexes image/annotation pairs without reading image payloads, then validates/rasterizes one scene at a time during prediction, evaluation or fresh training. It retains every tile, performs no augmentation or resizing, validates integer RGB values before uint8 conversion (the recovered TIFFs use int16), and exposes unknown-label error/ignore/legacy-undamaged policies. This does not regenerate the historical augmented training arrays or settle the report's ambiguous empty-tile filtering prose.

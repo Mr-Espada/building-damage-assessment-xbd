@@ -24,7 +24,7 @@ The conditional optimizer count is compatible with an earlier best checkpoint fr
 ## Repository structure
 
 ```text
-src/building_damage/       Later packaging and explicit-path train/evaluate commands
+src/building_damage/       Later array/raw-scene training, evaluation and prediction commands
 configs/                  Report-described and recovered-code parameter variants
 notebooks/                Guided inspection notebook with no saved data/output
 archive/final_candidate/  Original builder/helpers and sanitized inference notebook
@@ -56,6 +56,21 @@ This installs dependencies and exposes commands; it does not download data or st
 Acquire xBD through [the official xView2 dataset page](https://xview2.org/dataset), accepting the applicable dataset/imagery terms. Keep data in an external directory. No dataset is redistributed here. See [dataset acquisition, storage and preparation](docs/DATA.md).
 
 The report describes post-disaster imagery only: tier1+tier3 for training (9,168 scenes), hold+test for validation (1,866 scenes). It describes four 512-pixel tiles per 1024-pixel scene, damage-targeted training augmentation and no validation augmentation. The final preparation driver and resulting training/validation arrays were not recovered. Do not substitute the later 224-pixel crops or SAM layouts.
+
+## Local use with retained weights and raw scenes
+
+The later [local workflow](docs/LOCAL_WORKFLOW.md) works directly from paired xBD post-disaster TIFFs and JSON annotations. It creates a small scene manifest, streams four 512-pixel tiles per scene, generates prediction/annotation/overlay figures and evaluates a complete selected split. No large array reconstruction or dataset duplication is required. Weights remain external.
+
+```bash
+python -m building_damage prepare-scenes --dataset-root /external/xbd \
+  --splits test --scene hurricane-harvey_00000127_post_disaster \
+  --unknown-policy ignore --output-manifest outputs/example_manifest.json
+python -m building_damage predict-scenes --manifest outputs/example_manifest.json \
+  --config configs/local_inference.json --checkpoint /external/best_model.ckpt \
+  --output-dir outputs/example_prediction --execute
+```
+
+These are **new** local predictions/evaluations, with input and checkpoint hashes recorded. The exact historical preprocessing remains missing. Unknown annotation exclusion, all-four-tile retention, deterministic ordering and CPU-friendly batch size1 are explicitly later choices. Fresh argmax per-class scores are separate from the recovered library's probability scores and the fixed report values. Full training and benchmark reproduction remain unverified.
 
 ## Training
 

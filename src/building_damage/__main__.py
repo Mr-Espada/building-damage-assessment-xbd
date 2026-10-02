@@ -6,6 +6,7 @@ import json
 import math
 from pathlib import Path
 import platform
+import sys
 from datetime import datetime, timezone
 
 from .arrays import open_arrays, batch, metadata
@@ -56,10 +57,21 @@ def dump(path, value):
 
 
 def main(argv=None):
+    argv = sys.argv[1:] if argv is None else argv
+    if argv and argv[0] in ("prepare-scenes", "predict-scenes", "evaluate-scenes", "train-scenes"):
+        from .scene_workflow import main as scene_main
+        return scene_main(argv)
     parser = argparse.ArgumentParser(description="Recovered capstone workflows; defaults to input checks, never automatic training.")
     sub = parser.add_subparsers(dest="command", required=True)
     train = sub.add_parser("train", help="Check final arrays; --execute starts a separately authorized new run.")
     evaluate = sub.add_parser("evaluate", help="Check arrays/checkpoint; --execute records a separate new evaluation.")
+    for name, help_text in (
+        ("prepare-scenes", "Create a post-disaster raw-scene manifest without copying imagery."),
+        ("predict-scenes", "Generate fresh prediction figures from a raw-scene manifest."),
+        ("evaluate-scenes", "Evaluate all raw-scene tiles under a documented new protocol."),
+        ("train-scenes", "Prepare or explicitly launch new training from raw scenes, without augmentation."),
+    ):
+        sub.add_parser(name, help=help_text)
     for p in (train, evaluate):
         p.add_argument("--config", required=True)
         p.add_argument("--output-dir", required=True)
@@ -100,9 +112,9 @@ def main(argv=None):
         print("Headers checked. No run started. Use --execute only for a separately authorized experiment.")
         return 0
 
-    from .model import framework, build_model
+    from .model import framework, build_model, seed_framework
     tf, sm = framework()
-    tf.keras.utils.set_random_seed(cfg["seed"])
+    seed_framework(tf, cfg["seed"])
     plan["environment"] = {
         name: importlib.metadata.version(name)
         for name in ("tensorflow", "tf-keras", "segmentation-models", "numpy")
